@@ -488,26 +488,35 @@
     .result-detail-val { font-size: 14px; font-weight: 600; }
 
     /* ─── ABOUT ─── */
-    .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .about-inner { display: flex; flex-direction: column; gap: 60px; }
     .about-img-wrapper {
       position: relative;
+      width: 100%;
     }
     .about-img-box {
-      width: 100%; aspect-ratio: 4/5;
+      width: 100%; aspect-ratio: 16/9;
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 24px;
       display: flex; align-items: center; justify-content: center;
       overflow: hidden;
       position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     }
     .about-avatar {
-      font-size: 120px; opacity: .7;
-      position: absolute;
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .about-avatar img {
+      width: 100%; height: 100%;
+      object-fit: contain;
+      object-position: center;
+      padding: 20px;
     }
     .about-accent-card {
       position: absolute;
-      bottom: -20px; right: -20px;
+      bottom: 20px; right: 20px;
       background: var(--surface2);
       border: 1px solid var(--border);
       border-radius: 16px;
@@ -773,15 +782,15 @@
       </div>
       <div class="hero-stats reveal reveal-delay-4">
         <div class="stat">
-          <div class="stat-num">6<span>x</span></div>
-          <div class="stat-label">Avg. ROAS Delivered</div>
+          <div class="stat-num">500<span>+</span></div>
+          <div class="stat-label">Campaings Managed</div>
         </div>
         <div class="stat">
-          <div class="stat-num">$2<span>M+</span></div>
+          <div class="stat-num">$50<span>M+</span></div>
           <div class="stat-label">Ad Spend Managed</div>
         </div>
         <div class="stat">
-          <div class="stat-num">120<span>+</span></div>
+          <div class="stat-num">500<span>+</span></div>
           <div class="stat-label">Campaigns Launched</div>
         </div>
       </div>
@@ -810,7 +819,7 @@
               ============================================================
             -->
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
+              src="./images/hero2.png"
               alt="Google Ads Specialist"
               onerror="this.style.display='none';this.parentElement.querySelector('.hero-img-placeholder').style.display='flex';"
             />
@@ -996,7 +1005,7 @@
       <div class="result-card reveal reveal-delay-1">
         <div class="result-top">
           <div>
-            <div class="result-company">Local Law Firm</div>
+            <div class="result-company">Local Urgent Care</div>
           </div>
           <span class="result-industry">Legal</span>
         </div>
@@ -1006,11 +1015,11 @@
         <div class="result-details">
           <div class="result-detail-item">
             <div class="result-detail-label">Old CPL</div>
-            <div class="result-detail-val">$212</div>
+            <div class="result-detail-val">$140</div>
           </div>
           <div class="result-detail-item">
             <div class="result-detail-label">New CPL</div>
-            <div class="result-detail-val" style="color:var(--accent2)">$68</div>
+            <div class="result-detail-val" style="color:var(--accent2)">$45</div>
           </div>
           <div class="result-detail-item">
             <div class="result-detail-label">Monthly Leads</div>
@@ -1018,14 +1027,14 @@
           </div>
           <div class="result-detail-item">
             <div class="result-detail-label">Duration</div>
-            <div class="result-detail-val">60 days</div>
+            <div class="result-detail-val">90 days</div>
           </div>
         </div>
       </div>
       <div class="result-card reveal reveal-delay-2">
         <div class="result-top">
           <div>
-            <div class="result-company">SaaS Company</div>
+            <div class="result-company">Local Urgent Care</div>
           </div>
           <span class="result-industry">Technology</span>
         </div>
@@ -1061,7 +1070,9 @@
     <div class="about-inner">
       <div class="about-img-wrapper reveal">
         <div class="about-img-box">
-          <div class="about-avatar">👨‍💼</div>
+          <div class="about-avatar">
+            <img src="./images/2023.png" alt="">
+          </div>
           <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(79,141,255,.06),rgba(0,229,160,.04));"></div>
         </div>
         <div class="about-accent-card">
@@ -1416,10 +1427,17 @@
     </div>
     <div class="footer-bottom">
       <p>© 2025 AdsPro. All rights reserved. · Google Ads Certified Partner</p>
-      <div class="social-links">
-        <a class="social-link" href="#" title="LinkedIn">in</a>
-        <a class="social-link" href="#" title="Twitter">𝕏</a>
-        <a class="social-link" href="#" title="Email">✉</a>
+      <div style="display:flex; gap:24px; align-items:center;">
+        <div style="display:flex; gap:12px; font-size:13px;">
+          <a href="terms.html" style="color:var(--muted); text-decoration:none; transition:color .2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'">Terms & Conditions</a>
+          <span style="color:var(--border)">·</span>
+          <a href="privacy.html" style="color:var(--muted); text-decoration:none; transition:color .2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'">Privacy Policy</a>
+        </div>
+        <div class="social-links">
+          <a class="social-link" href="#" title="LinkedIn">in</a>
+          <a class="social-link" href="#" title="Twitter">𝕏</a>
+          <a class="social-link" href="#" title="Email">✉</a>
+        </div>
       </div>
     </div>
   </div>
